@@ -16,8 +16,9 @@ export class TaskComponent {
   constructor(private utilService: UtilService) {}
 
   changeStatus(updatedStatus) {
-    this.task.status = updatedStatus;
-    this.statusChanged.emit(this.task);
+    //this.task.status = updatedStatus;
+
+    this.statusChanged.emit({id: this.task.id, status: updatedStatus});
     //console.log(this.task)
   }
 }

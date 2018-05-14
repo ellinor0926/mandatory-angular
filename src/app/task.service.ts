@@ -38,6 +38,12 @@ export class TaskService {
   }
 
   updateTask(id: number, status: StatusType) {
+    this.taskObjects.map(task => {
+      if(task.id === id){
+        task.status = status;
+      }
+      return task;
+    });
     this.updateSubscribers();
   }
 

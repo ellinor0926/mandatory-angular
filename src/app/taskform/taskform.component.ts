@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TaskService} from "../task.service";
 
 @Component({
@@ -8,11 +8,9 @@ import {TaskService} from "../task.service";
 })
 export class TaskformComponent {
 
-
   constructor(private taskService: TaskService) {}
 
   submit(form) {
     this.taskService.addTask(form.value.title, form.value.description);
-    //console.log(form.value)
   }
 }
